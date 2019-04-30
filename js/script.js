@@ -114,13 +114,17 @@
     }
 
     function updateState(type) {
-      if (category === 'solo') {
-        state.activities.push(...activities['solo' + type]);
-      } else if (category === 'team') {
-        state.activities.push(...activities['team' + type]);
-      } else {
-        state.activities.push(...activities['solo' + type]);
-        state.activities.push(...activities['team' + type]);
+      switch (category) {
+        case 'solo':
+          state.activities.push(...activities[`solo${type}`]);
+          break;
+        case 'team':
+          state.activities.push(...activities[`team${type}`]);
+          break;
+        default:
+          state.activities.push(...activities[`solo${type}`]);
+          state.activities.push(...activities[`team${type}`]);
+          break;
       }
     }
 
@@ -128,18 +132,24 @@
     const into = document.querySelector('.activities');
 
 //		ReactDOM.render(<Activities {...state} />, $into);
-    ReactDOM.render(<Activities {...state} />, into);
+//     ReactDOM.render(<Activities {...state} />, into);
 
-    function Activities(props) {
-      const activitiesList = props.activities.map(function (activity, index) {
-        return <li key={index}>{activity}</li>;
-      });
-      return (
-        <div>
-          <ul>{activitiesList}</ul>
-        </div>
-      );
-    }
+    // function Activities(props) {
+    //   const activitiesList = props.activities.map(function (activity, index) {
+    //     return <li key={index}>{activity}</li>;
+    //   });
+    //   return (
+    //     <div>
+    //       <ul>{activitiesList}</ul>
+    //     </div>
+    //   );
+    // }
+
+    let activitiesContainer = document.createElement('div');
+    let list = document.createElement('ul');
+    state.activities.forEach(() => {
+      let listItem = document.createElement('li');
+    });
 
     $('.results').slideDown(300);
   }
