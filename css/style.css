@@ -61,7 +61,7 @@ em {
 }
 
 .header {
-    background: -webkit-linear-gradient( top, rgba(0, 0, 0, .2), rgba(0, 0, 0, .5)), url(../images/backgrounds/running.jpg);
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, .2), rgba(0, 0, 0, .5)), url(../images/backgrounds/running.jpg);
     background: linear-gradient(180deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .5)), url(../images/backgrounds/running.jpg);
     background-repeat: no-repeat;
     background-position: center center;
@@ -88,7 +88,7 @@ em {
 
 @media screen and (min-width: 600px) {
     .header {
-        background: -webkit-linear-gradient( top, rgba(0, 0, 0, .2), rgba(0, 0, 0, .5)), url(../images/backgrounds/running.jpg);
+        background: -webkit-linear-gradient(top, rgba(0, 0, 0, .2), rgba(0, 0, 0, .5)), url(../images/backgrounds/running.jpg);
         background: linear-gradient(180deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .5)), url(../images/backgrounds/running.jpg);
         background-repeat: no-repeat;
         background-position: center center;
@@ -106,9 +106,11 @@ em {
         line-height: 140%;
         font-size: 2.5rem;
     }
+
     .header .tagline h1 {
         display: none;
     }
+
     .header .tagline em {
         font-size: 140%;
         color: #f3d350;
@@ -231,6 +233,10 @@ em {
 
 .nav .nav-elements .forecast .results {
     display: none;
+}
+
+.nav .nav-elements .forecast .open {
+    display: block;
     border: 1px solid white;
     border-top: none;
 }
@@ -425,6 +431,7 @@ em {
         background-size: 30% auto;
         min-height: 100vh;
     }
+
     #history .text-content {
         width: 70%;
     }
@@ -664,13 +671,13 @@ em {
 
 @media screen and (min-width: 600px) {
     #people .people-cards .person-card {
-        width: calc(100%/2 - 1.5rem);
+        width: calc(100% / 2 - 1.5rem);
     }
 }
 
 @media screen and (min-width: 1200px) {
     #people .people-cards .person-card {
-        width: calc(100%/3 - 1.5rem);
+        width: calc(100% / 3 - 1.5rem);
     }
 }
 
